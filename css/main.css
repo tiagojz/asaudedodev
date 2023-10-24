@@ -1,0 +1,51 @@
+.button {
+	 border: none;
+	 outline: none;
+	 padding: 1em 1.5em;
+	 font-size: 1rem;
+	 margin-top: 2em;
+	 cursor: pointer;
+	 background: #9e00fa;
+	 color: #fff;
+	 will-change: background;
+	 transition: background 1s;
+}
+ .button:hover {
+	 background: #e500fa;
+}
+ .overlay {
+	   opacity:1;
+        position: absolute;
+        z-index:0;
+        top:0;
+        left:0;
+        width:100vw;
+        height:100vw;
+        background:#000;
+}
+
+ .share, .overlay {
+	 display: none;
+}
+ .show-share {
+	 display: block;
+}
+
+ .share {
+	position: absolute;
+        z-index:1;
+        top:0;
+        left:0;
+        right:0;
+        width:50%;
+        padding: 1em;
+        background:#fff;
+
+button {
+	 border: none;
+	 padding: .8em 1.2em;
+	 margin-top: 3em;
+	 cursor: pointer;
+	 width: 32%;
+ }
+}
