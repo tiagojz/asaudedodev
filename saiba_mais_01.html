@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta('Content-Type: application/json; charset=utf-8');>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!--<link rel="stylesheet" type="text/css" href="http://mobiletest.me/libs/css/foundation-essentials-5.5.1/css/normalize.302.min.css" media="screen">-->
+        <!--<link rel="stylesheet" type="text/css" href="css/mobile.css" media="screen">-->
+        <meta name="author"
+            content="Desenvolvido por Tiago José Zangerolami, https://br.linkedin.com/in/tiago-front-end-web">
+        <meta name="keywords" content="Saúde Mental, PUC/RS" />
+        <meta name="rights" content="Tiago José Zangerolami" />
+        <meta name="description"
+            content="Desenvolvimento de uma solução que possibilite a interação visando a concientização da importância da Saúde Mental" />
+
+        <!-- Botao Share Facebook -->
+        <meta property="og:url" content="http://asaudedodev.free.nf/saiba_mais_01.html" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Tiago José Zangerolami" />
+        <meta property="og:description" content="Pós Graduação em Desenvolvimento Full Stack - PUC/RS" />
+        <meta property="og:image" content="images/puc_rs.png" />
+
+        <title>A Saúde do DEV</title>
+
+        <link href="favicon.ico" rel="shortcut icon">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/jumbotron/">
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="jumbotron.css" rel="stylesheet">
+
+        <!-- SOCIAL ICONS button bootstraps -->
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/buttonsocial.css">
+        <!--<link rel="stylesheet" href="font-awesome-6.4.2/css/fontawesome.min.css" type="text/css">-->
+
+        <link href="quiz/css/reset.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="quiz/css/slickQuiz.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="quiz/css/master.css" media="screen" rel="stylesheet" type="text/css">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Esconde Navbar -->
+    <script type="text/javascript">
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 200) {
+                $('.navbar').fadeOut();
+            }
+            else {
+                $('.navbar').fadeIn();
+            }
+        });
+    </script>
+    <!-- END Esconde Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+            data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="my-1 mx-2 close">X</span>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav nav-fill w-100">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false"><i class="fa fa-graduation-cap" style="width:50px;"
+                            aria-hidden="true"></i><img style="width:5em;" src="images/puc_rs.png"></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" target="_blank" title="Website PUCRS" href="https://www.pucrs.br/"><i
+                                class="fa fa-1x fas fa-sitemap"></i> Website PUCRS</a>
+                        <!--<img style="width:2em;" src="images/puc_rs.png"/> -->
+                        <a class="dropdown-item" target="_blank" title="Estudo na PUCRS"
+                            href="https://www.pucrs.br/estudenapucrs/"><i class="fa fa-1x fas fa-sitemap"></i> Estude na
+                            PUCRS</a>
+                        <!--<img style="width:2m;" src="images/puc_rs.png"/>-->
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false"><i class="fa fa-1x fas fa-sitemap"></i> Saiba
+                        mais</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" target="_blank" href="saiba_mais_01.html"><i
+                                class="fa fa-1x fas fa-sitemap"></i>Conteúdos Avançados 01</a>
+                        <a class="dropdown-item" target="_blank" href="saiba_mais_02.html"><i
+                                class="fa fa-1x fas fa-sitemap"></i>Conteúdos Avançados 02</a>
+                        <!--<a class="dropdown-item" target="_blank" href="instrucoes03.html"><i class="fa fa-1x fas fa-sitemap"></i> </a>-->
+                        <!--<a class="dropdown-item" target="_blank" href="matrix.html"><i class="fa fa-1x fas fa-laptop"></i> </a>-->
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html"><i class="fa fa-1x fas fa-home"></i> Quiz<span
+                            class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main role="main">
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-3">
+                    Conteúdos avançados</br>
+                    <p class="display-4" ;>Saiba mais 01</p>
+                    <!--<img style="width:5em;" src="images/logo-html-5-css-javascript-source-code-for-the-taking-23.png"></p>-->
+                </h1>
+                <!-- \\\\\\\\\\\\\\ BUTTONS COMPARTILHAR REDES SOCIAIS ////////// -->
+                <div style="padding-top:-4px;padding-right: 4px;padding-bottom: 4px;padding-left: 4px;float:right;background-color: #fff;border-radius:0.8em;"
+                    src="images/facebooklogo.jpg">
+                    <div id="fb-root"></div>
+                    <script async defer crossorigin="anonymous"
+                        src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v18.0" nonce="MxGORp8w"></script>
+
+                    <div class="fb-share-button" data-href="https://verbetoteca.info/verbete/saude-fisica"
+                        data-layout="button_count" data-size="">
+                        <a target="_blank"
+                            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fverbetoteca.info%2Fverbete%2Fsaude-fisica&amp;src=sdkpreparse"
+                            src="images/facebooklogo.jpg" class="fb-xfbml-parse-ignore">Compartilhar Facebook</a>
+                    </div>
+                </div>
+
+                <!-- \\\\\\\\\\\\\\ END BUTTONS COMPARTILHAR REDES SOCIAIS ////////// -->
+
+
+                <!-- \\\\\\\\\\\\\\ BUTTONS COMPARTILHAR REDES SOCIAIS ////////// 
+                            <div style="padding-top:-4px;padding-right: 4px;padding-bottom: 4px;padding-left: 4px;;float:right;background-color: #fff;border-radius:0.8em;">    
+                                Load Facebook SDK for JavaScript 
+                                <div id="fb-root"></div>
+                                <script>(function(d, s, id) {
+                                    var js, fjs = d.getElementsByTagName(s)[0];
+                                    if (d.getElementById(id)) return;
+                                    js = d.createElement(s); js.id = id;
+                                    js.src = "https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v4.0";
+                                    fjs.parentNode.insertBefore(js, fjs);
+                                }(document, 'script', 'facebook-jssdk'));</script>-->
+
+                <!-- Your share button code 
+                                <div class="fb-share-button" 
+                                    data-href="http://.html" 
+                                    data-layout="button_count">
+                                </div> 
+                            </div>
+                             \\\\\\\\\\\\\\ END BUTTONS COMPARTILHAR REDES SOCIAIS ////////// -->
+
+            </div>
+        </div>
+
+        <div class="container">
+
+            <!-- Example row of columns -->
+            <div class="row">
+                <div class="col-md-8">
+                    <br>
+                    <div class="text-start">
+                        <h3 class="text-center">SAÚDE MENTAL <i class="fa fa-stethoscope" aria-hidden="true"></i></h3>
+                        <p class="text-center">(AUTOCONSCIENCIOMETROLOGIA)</p>
+                        <h4 class="text-center">Conformática</h4>
+                        <p>
+                        <h4><i class="fa fa-book" aria-hidden="true"></i> Definologia:</h4>A saúde mental é a condição
+                        natural, estado de equilíbrio dinâmico ou a qualidade entre o organismo humano e o
+                        holopensene da pessoa com boa disposição e completo bem-estar da autopensenização ou com
+                        ausência de doença de origem mental
+                        ou psicopatia.</p>
+                        <p>
+                        <h4><i class="fa fa-book" aria-hidden="true"></i> Tematologia:</h4>Tema central homeostático.
+                        </p>
+                        <p>
+                        <h4><i class="fa fa-book" aria-hidden="true"></i> Etimologia:</h4>O termo saúde vem do idioma
+                        Latim, salus, “salvação; conservação (da vi-da); afastamento do perigo; vida”.
+                        Apareceu no Século XIII. O vocábulo mental procede do idioma Latim Tardio, mentalis, “do
+                        espírito; mental”, e este de mens,
+                        mentis, “atividade do espírito; intenção; pensamento; inteligência”. Surgiu no Século XV.</p>
+                        <p>
+                        <h4><i class="fa fa-book" aria-hidden="true"></i> Sinonimologia:</h4>01. Saúde mental; saúde
+                        psíquica. 02. Saúde cortical. 03. Saúde da au-topensenização. 04. Saúde neurológica.
+                        05. Ausência de doença mental. 06. Bem-estar racional. 07. Pujança da mente. 08. Vigor mental.
+                        09. Homeostase cortical;
+                        homeostase mental; homeos-tase neurológica. 10. Estado de saúde mental.</p>
+                        <p>
+                        <h4><i class="fa fa-book" aria-hidden="true"></i> Neologia:</h4>As duas expressões compostas
+                        saúde mental básica e saúde mental avançada são neologismos técnicos da
+                        Autoconscienciometrologia.</p>
+                        <p>
+                        <h4><i class="fa fa-book" aria-hidden="true"></i> Antonimologia:</h4>01. Doença mental; doença
+                        psiquiátrica. 02. Doença cortical. 03. Enfermidade mental. 04. Distúrbio mental. 05. Distúrbio
+                        neurológico.
+                        06. Debilidade mental; idiotismo. 07. Saúde emocional. 08. Saúde física. 09. Saúde intelectual.
+                        10. Saúde parapsíquica.</p>
+                        <p>
+                        <h4><i class="fa fa-book" aria-hidden="true"></i> Estrangeirismologia:</h4>O checkup ou exame de
+                        saúde periódico.</p>
+                        <p>
+                        <h4><i class="fa fa-book" aria-hidden="true"></i> Atributologia:</h4>Predomínio das faculdades
+                        mentais, notadamente do autodiscernimento quanto ao equilíbrio mental.</p>
+                        <p>
+                        <h4><i class="fa fa-book" aria-hidden="true"></i> Megapensenologia:</h4>Eis 1 megapensene
+                        trivocabular sintetizando o tema: – Saúde significa vida.</p>
+                        <p>
+                        <h4><i class="fa fa-book" aria-hidden="true"></i> Fatologia:</h4>A saúde mental; a saúde
+                        cortical; a saúde neuronal; a saúde da lucidez; a saúde mentalsomática; a manutenção
+                        da saúde mental; a saúde mental na adolescência; a saúde men-tal após a aposentadoria; a saúde
+                        mental na terceira idade; o
+                        equilíbrio da saúde mental; a defesa da saúde; os tênues limites da sanidade; a triagem em saúde
+                        mental infantil; os eventos
+                        de vida produtores de estresse e transtornos mentais comuns; a mudança forçada de moradia; a
+                        agressão física; o rompimento de
+                        relação afetiva; a internação hospitalar; o assalto e o roubo; a saúde mental no trabalho; o
+                        trabalho e os transtornos
+                        mentais graves; a saúde mental do cuidador na institui-ção hospitalar; o processo migratório e a
+                        saúde mental; o trabalho de
+                        reintegração social do hospital psiquiátrico; a Higiene Consciencial; a Higiene Mentalsomática;
+                        a Medicina centrada no paciente;
+                        o processo de dissolução da conjugabilidade solapando a saúde mental; a robustez mental da
+                        pessoa; o bom humor natural perante a
+                        sanidade mental; o atestado de saúde; o atestado de sanidade; os planos de saúde; o seguro de
+                        saúde; os serviços de saúde;
+                        as unidades de saúde; o centro de saúde; a casa de saúde; a saúde pública; a Secretaria
+                        Municipal de Saúde; o Ministério da Saúde;
+                        a Organização Mundial da Saúde (OMS).</p>
+                        <p>
+                        <h4><i class="fa fa-book" aria-hidden="true"></i> Hominologia:</h4>O Homo sapiens
+                        mentalsomaticus; o Homo sapiens sanus; o Homo sapiens homeostaticus; o Homo sapiens autolucidus;
+                        o Homo sapiens conscientiologus; o Homo sa-piens recyclans; o Homo sapiens libertarius.</p>
+                        <p>
+                        <h4><i class="fa fa-book" aria-hidden="true"></i> Exemplologia:</h4>Saúde mental básica = a da
+                        pessoa ao viver dispensando todo tipo de tratamento psicológico, psiquiátrico ou
+                        consciencioterapêutico; saúde mental avançada = a da pessoa desassediada permanente total ou o
+                        ser desperto, homem ou mulher.</p>
+                        <p>
+                        <h4><i class="fa fa-book" aria-hidden="true"></i> Culturologia:</h4>A cultura da saúde mental.
+                        </p>
+                        <p>
+                        <h4>A SAÚDE MENTAL, OU A MANUTENÇÃO ININTERRUPTA DO EQUILÍBRIO DA LUCIDEZ PESSOAL, É
+                            INDISPENSÁVEL ÀS RESOLUÇÕES CORRETAS DA
+                            PESSOA NA DIREÇÃO DA PRÓPRIA EXISTÊNCIA INTRA E EXTRAFÍSICA.</h4>
+                        </p>
+
+                        <a target="_blank" href="https://verbetoteca.info/verbete/saude-mental">
+                            <p><i class="fa fa-external-link" aria-hidden="true"></i>&nbsp;Link: Texto copiado da
+                                Enciclopédia da Conscienciologia</p>
+                        </a>
+
+
+                    </div>
+                    <!--<div class="tab-content px-1 pt-3">
+                            <img style="position: relative;width: 100%;"; src="images/VERBETE_saude-mental_00001.jpg"> 
+                            <img style="position: relative;width: 100%;" src="images/VERBETE_saude-mental_00002.jpg"> 
+                            <img style="position: relative;width: 100%;" src="images/VERBETE_saude-mental_00003.jpg">             
+                        </div>-->
+                    <!--  <div class="card border-0 copyable">
+                                <ul class="nav nav-tabs copyable">
+                                    <li class="nav-item">
+                                        <button type="button" class="btn btn-outline-primary" href="#tab1" data-toggle="tab">Linguagens <i class="fa fa-1x fas fa-book"></i></button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button type="button" class="btn btn-outline-primary" href="#tab2" data-toggle="tab">Conversões ⟳</button>
+                                    </li>
+                                </ul>
+                            
+                                <div class="tab-content px-1 pt-3">
+                       
+                                    <div class="tab-pane active" id="tab1">  
+                                                <h2>Linguagem de Alto Nível (programador) > Assembly > Linguagem de Máquina (01100110):</h2> 
+                                                
+                                                <img title="JavaScript" style="width:100%;" src="images/tiposlinguagem.jpg"/> 
+                                                <hr>
+                                                <img title="JavaScript" style="width:100%;" src="images/linguagens.png"/>                                 
+                                    </div>
+                            
+
+                                        <div class="tab-pane" id="tab2"> 
+                                            <h2> Digite ⌨ nos campos abaixo e click para converter ⟳</h2> 
+                                            <div>
+                                            <script type="text/javascript">//<![CDATA[
+                                            function converter() {
+                                            var  output=document.getElementById("ti2");  
+                                            var input=document.getElementById("ti1").value;
+                                                output.value = "";
+                                                for (i=0; i < input.length; i++) {
+                                                output.value +=input[i].charCodeAt(0).toString(2) + " ";
+                                                }
+                                            }
+                                            //]]></script>
+
+                                            <script>
+                                                // tell the embed parent frame the height of the content
+                                                if (window.parent && window.parent.parent){
+                                                window.parent.parent.postMessage(["resultsFrame", {
+                                                    height: document.body.getBoundingClientRect().height,
+                                                    slug: "fA24Y"
+                                                }], "*")
+                                                }
+
+                                                // always overwrite window.name, in case users try to set it manually
+                                                window.name = "result"
+                                            </script>
+                                                    <h3>Texto</h3>
+                                                <form>
+                                                    <input id="ti1" placeholder="Digite um texto" onclick="this.select()">
+                                                    <button type="button" class="btn btn-outline-success btn-sm" onclick="converter();"> Binário</button></br>
+                                                    <input id="ti2" placeholder="Resultado" onclick="this.select()"><button title="Limpar" type="reset" style="background-color: #fff; background-image: none; border-color: transparent;margin:-37px;position:relative;font-size:0.8em;"><i class="fa fa-1x fas fa-eraser"></i></button>
+                                                </form>
+                                                    
+                                        </div>
+
+                                                 <hr>
+                                             
+                                                <div>
+                                                    
+                                                    <h3>Binário</h3> 
+                                                    <form>
+                                                        <input id="bin" type="text" placeholder="Digite binário"onclick="this.select()"><button title="Limpar" type="reset" style="background-color:#fff; background-image: none; border-color: transparent;margin-left:-37px;position:relative;font-size:0.8em;"><i class="fa fa-1x fas fa-eraser"></i></button>
+                                                        <button type="button" class="btn btn-outline-secondary" style="position:relative;" onclick="convert(document.getElementById('bin').value, 'binOutput', 'bin', 'dec')"> Decimal</button>
+                                                        <button type="button" class="btn btn-outline-secondary" style="position:relative;" onclick="convert(document.getElementById('bin').value, 'binOutput', 'bin', 'hex')"> Hexadecimal</button><br>
+                                                            <i class="fa fa-1x fas fa-calculator"></i> Resultado:  <span id="binOutput" style="color: #008000" onclick="this.select()">
+                                                    </form>
+                                                </div>
+                                                <hr>
+                                                <div>
+                                                    <h3>Decimal</h3>
+                                                     <form>
+                                                        <input id="dec" placeholder="Digite decimal" onclick="this.select()"><button title="Limpar" type="reset" style="background-color:#fff; background-image: none; border-color: transparent;margin-left:-37px;position:relative;font-size:0.7em;">⌫</button>
+                                                        <button type="button" class="btn btn-outline-success" style="position:relative;" onclick="convert(document.getElementById('dec').value, 'decOutput', 'dec', 'bin')"> Binário</button>
+                                                        <button type="button" class="btn btn-outline-success" style="position:relative;" onclick="convert(document.getElementById('dec').value, 'decOutput', 'dec', 'hex')"> Hexadecimal</button><br />
+                                                        <i class="fa fa-1x fas fa-calculator"></i> Resultado: <span onclick="this.select()" id="decOutput" style="color: #008000">
+                                                     </form>
+                                                </div>
+                                                 <hr>
+                                                <div>
+                                                    <h3>Hexadecimal</h3>
+                                                    <form>
+                                                        <input id="hex" placeholder="Digite hexadecimal" onclick="this.select()"><button title="Limpar" type="reset" style="background-color:#fff; background-image: none; border-color:transparent;margin-left:-37px;position:relative;font-size:0.7em;">⌫</button>
+                                                        <button type="button" class="btn btn-outline-success"  style="position:relative;" onclick="convert(document.getElementById('hex').value, 'hexOutput', 'hex', 'bin')"> Binário</button>
+                                                        <button type="button" class="btn btn-outline-success" onclick="convert(document.getElementById('hex').value, 'hexOutput', 'hex', 'dec')"> Decim</button><br />
+                                                        <i class="fa fa-1x fas fa-calculator"></i> Resultado: <span id="hexOutput" style="color: #008000" onclick="this.select()">
+                                                    </form>
+                                                </div>
+                                            
+                                        <script type="text/javascript">
+                                            var convert = function(src, output, from, to) {
+                                            switch (from) {
+                                                case "bin": 
+                                                    document.getElementById(output).innerHTML = to === "dec" ? binToDec(src) : binToHex(src); 
+                                                    break;            
+                                                case "dec":
+                                                    document.getElementById(output).innerHTML = to === "bin" ? decToBin(src) : decToHex(src);
+                                                    break;
+                                                case "hex":
+                                                    document.getElementById(output).innerHTML = to === "bin" ? hexToBin(src) : hexToDec(src);
+                                                    break;
+                                            }
+                                        };
+
+                                        var binToDec = function(src) {
+                                            
+                                            var i;
+                                            var n = 0;
+                                            var srcString = src.toString();
+                                            var returnNum = 0;
+                                            
+                                            for (i = srcString.length - 1; i >=0; i--) {
+                                                returnNum += srcString[i] * 2 ** n;
+                                                n++;
+                                            }
+                                            
+                                            return returnNum;
+                                            
+                                        };
+
+                                        var binToHex = function(src) {
+                                            
+                                            var mapping = {
+                                                "0000" : "0",
+                                                "0001" : "1",
+                                                "0010" : "2",
+                                                "0011" : "3",
+                                                "0100" : "4",
+                                                "0101" : "5",
+                                                "0110" : "6",
+                                                "0111" : "7",
+                                                "1000" : "8",
+                                                "1001" : "9",
+                                                "1010" : "A",
+                                                "1011" : "B",
+                                                "1100" : "C",
+                                                "1101" : "D",
+                                                "1110" : "E",
+                                                "1111" : "F"
+                                            };
+                                            
+                                            var i;
+                                            var srcString = src.toString();
+                                            var returnString = "";
+                                            var remainder = "";
+                                            
+                                            for (i = srcString.length; i >= 4; i -= 4) {
+                                                if (i - 4 < srcString.length) {
+                                                    returnString = mapping[srcString.substr(i-4,4)] + returnString;
+                                                }
+                                            }
+                                            
+                                            if (i !== 0) {
+                                                remainder = srcString.substr(0,i);
+                                                
+                                                while (remainder.length < 4) {
+                                                    remainder = "0" + remainder;
+                                                }
+                                                
+                                                returnString = mapping[remainder] + returnString;
+                                            }
+                                            
+                                            return returnString;
+                                            
+                                        };
+
+                                        var decToBin = function(src) {
+                                            
+                                            var n = 0;
+                                            var returnString = "";
+                                            
+                                            while (2 ** (n) < src) {
+                                                n++;
+                                            }
+                                            
+                                            for (n; n>=0; n--) {
+                                                if (2 ** n <= src) {
+                                                    returnString += "1";
+                                                    src = src % 2 ** n;
+                                                } else {
+                                                    returnString += returnString === "" ? "" : "0";
+                                                }
+                                            }
+                                            
+                                            return returnString;
+                                            
+                                        };
+
+                                        var decToHex = function(src) {
+                                            
+                                            var mapping = {
+                                                "0" : "0",
+                                                "1" : "1",
+                                                "2" : "2",
+                                                "3" : "3",
+                                                "4" : "4",
+                                                "5" : "5",
+                                                "6" : "6",
+                                                "7" : "7",
+                                                "8" : "8",
+                                                "9" : "9",
+                                                "10" : "A",
+                                                "11" : "B",
+                                                "12" : "C",
+                                                "13" : "D",
+                                                "14" : "E",
+                                                "15" : "F"
+                                            };
+                                            
+                                            var n = 0;
+                                            var returnString = "";
+                                            
+                                            while (16 ** (n+1) < src) {
+                                                n++;
+                                            }
+                                            
+                                            for (n; n >= 0; n--) {
+                                                if (16 ** n <= src) {
+                                                    returnString += mapping[Math.floor(src / 16 ** n).toString()];
+                                                    src = src - Math.floor(src / 16 ** n) * (16 ** n);
+                                                } else {
+                                                    returnString += "0";
+                                                }
+                                            }
+                                            
+                                            return returnString;
+                                            
+                                        };
+
+                                        var hexToBin = function(src) {
+                                            
+                                            var mapping = {
+                                                "0" : "0000",
+                                                "1" : "0001",
+                                                "2" : "0010",
+                                                "3" : "0011",
+                                                "4" : "0100",
+                                                "5" : "0101",
+                                                "6" : "0110",
+                                                "7" : "0111",
+                                                "8" : "1000",
+                                                "9" : "1001",
+                                                "A" : "1010",
+                                                "B" : "1011",
+                                                "C" : "1100",
+                                                "D" : "1101",
+                                                "E" : "1110",
+                                                "F" : "1111"
+                                            };
+                                            
+                                            var srcString = src.toString();
+                                            var i;
+                                            var returnString = "";
+                                            
+                                            for (i = 0; i < srcString.length; i++) {
+                                                returnString += mapping[srcString[i]];
+                                            }
+                                            
+                                            return returnString;
+                                            
+                                        };
+
+                                        var hexToDec = function(src) {
+                                            
+                                            var mapping = {
+                                                "0" : "0",
+                                                "1" : "1",
+                                                "2" : "2",
+                                                "3" : "3",
+                                                "4" : "4",
+                                                "5" : "5",
+                                                "6" : "6",
+                                                "7" : "7",
+                                                "8" : "8",
+                                                "9" : "9",
+                                                "A" : "10",
+                                                "B" : "11",
+                                                "C" : "12",
+                                                "D" : "13",
+                                                "E" : "14",
+                                                "F" : "15"
+                                            };
+                                            
+                                            var srcString = src.toString();
+                                            var returnNum = 0;
+                                            var i;
+                                            
+                                            for (i = 0; i < srcString.length; i++) {
+                                                returnNum += mapping[srcString[i]] * (16 ** (srcString.length -1 - i));
+                                            }
+                                            
+                                            return returnNum;
+                                            
+                                        };
+                                        </script>
+                                        <hr>
+                                        <br>
+                                        <p>Referências:</p> 
+                                        <p><a target="_blank" href="https://github.com/rickymerrefield/javascript_bit_converter/blob/master/bit_converter.js">https://github.com/rickymerrefield/javascript_bit_converter/blob/master/bit_converter.js</a></p>
+                                                        <p><a target="_blank" href="https://codebeautify.org/binary-hex-converter">https://codebeautify.org/binary-hex-converter</a></p>
+                                                       <p><a target="_blank" href="https://yiqu.github.io/binit/">https://yiqu.github.io/binit/</a></p>
+                                                       <p><a target="_blank" href="http://www.unit-conversion.info/texttools/category/Converters#data"> http://www.unit-conversion.info/texttools/category/Converters#data</a></p>
+
+                                        </div>
+                                </div>
+                         </div>-->
+                </div>
+                <div class="col-md-4">
+
+                    <style>
+                        .caixavideo {
+                            position: relative;
+                            width: 100%;
+                            height: 0;
+                            padding-bottom: 56.25%;
+
+                        }
+
+                        .video {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 0.8rem;
+                        }
+                    </style>
+                    <h2 class="card-header" style="text-align:center;">Vídeo <i class="fa fa-2x fab fa-youtube"
+                            style="vertical-align: sub;"></i><a target="_blank"
+                            href="https://www.youtube.com/watch?v=mdyeM_HB9nw&ab_channel=Tertuliarium"> Tertuliarium</a>
+                    </h2>
+
+                    <h3>Clique abaixo para acessar o vídeo sobre o assunto.<i class="fa fa-arrow-down"
+                            aria-hidden="true"></i></h3>
+                    <div class="caixavideo">
+                        <iframe class="video" width="775" height="581" src="https://www.youtube.com/embed/mdyeM_HB9nw"
+                            title="Tertúlia 1141 - Saúde mental (Autoconscienciometrologia) | #Conscienciologia"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div></br>
+
+                    <p>Você, leitor ou leitora, se sente bem com a própria saúde mental? Você considera a si mesmo mais
+                        evoluciente ou mais consciencioterapeuta?</p>
+                    <h2 class="card-header" style="text-align:center;">Vídeo <i class="fa fa-2x fab fa-youtube"
+                            style="vertical-align: sub;"></i><a target="_blank"
+                            href="https://www.youtube.com/@anabeatrizbsilva/featured"> Dra. Ana Beatriz Barbosa <i
+                                class="fa fa-user-md" aria-hidden="true"></i></a></h2>
+                    <p>
+                    <h3>O melhor método para ter saúde mental em 2023 <i class="fa fa-arrow-down"
+                            aria-hidden="true"></i></h3>
+                    </p>
+                    <div class="caixavideo">
+                        <iframe class="video" width="775" height="581" src="https://www.youtube.com/embed/Vac6KhT1WaI"
+                            title="O MELHOR MÉTODO para ter SAÚDE MENTAL em 2023 | Dra. Ana Beatriz Barbosa"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div></br>
+                    <p>Ana Beatriz Barbosa Silva é uma médica psiquiatra formada pela UERJ e com residência na UFRJ. Ela
+                        recebeu o título de professora Honoris Causa pela UniFMU.
+                        Desde 2009, ela é consultora do programa Mais Você da Rede Globo e é Host do Podcast PodPeople
+                        desde 2023.</p>
+                    <p>Ana Beatriz é palestrante em diversas áreas do comportamento humano e já ministrou palestras para
+                        empresas privadas, como Natura e BrasilPrev, bem como para órgãos públicos,
+                        incluindo o Supremo Tribunal Federal, o Ministério Público e a Escola de Magistratura Emerj do
+                        RJ. Ela também ministrou cursos na Casa do Saber sobre transtornos alimentares, psicopatia,
+                        TDAH e transtornos de ansiedade. Além disso, é autora de vários livros, incluindo a cartilha
+                        Antibullying, produzida para o Conselho Nacional de Justiça em 2010. Ana Beatriz prestou
+                        consultoria
+                        à Gloria Perez na construção de personagens em Caminho das Índias, Dupla Identidade e A Força do
+                        Querer.</p>
+                    <p>
+                    <h5><i class="fa fa-book" aria-hidden="true"></i> Livro mais vendido na Amazon: Mentes perigosas
+                        (Edição comemorativa de 10º aniversário) eBook Kindle</h5>
+                    </p>
+                    <div class="caixavideo">
+                        <iframe class="video" type="text/html" sandbox="allow-scripts allow-same-origin allow-popups"
+                            width="775" height="581" frameborder="0" allowfullscreen style="max-width:100%"
+                            src="https://ler.amazon.com.br/kp/card?asin=B07JKFWKGG&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_JW4W1AAJPEGYVH72MC03"></iframe>
+                    </div></br>
+                    <p>Sucesso editorial absoluto, esta edição de aniversário inclui dois capítulos novos. Um sobre
+                        psicopatas no ambiente em que deveríamos nos sentir mais seguros — a família —
+                        em que a autora relata conhecidos e estarrecedores casos de psicopatia. E outro sobre a
+                        conhecida relação entre psicopatia e poder, que trata de grandes tiranos da história
+                        que usaram o poder político para dar vasão aos seus impulsos mais perversos.</p>
+
+
+                    <!--<a target="_blank" href="https://www.echalk.co.uk/ComputerScience/ComputerSystems/SystemArchitecture/instructionsGame/programExecution.html";><img style="width:100%;" src="images/echalk.png"/></a>
+                             <h5><a target="_blank" href="https://www.echalk.co.uk/ComputerScience/ComputerSystems/SystemArchitecture/instructionsGame/programExecution.html";>www.eChalk.co.uk</a></h5>-->
+
+
+                </div>
+            </div>
+
+        </div>
+        <!-- fim container -->
+    </main>
+    <br>
+
+
+    <!-- \\\\\\\\\\\\\ Footer ////////////// -->
+    <footer class="card-footer">
+        <p style="float:right;text-align:centerdisplay; inline-block;line-height:200%;">Aluno <c
+                style="font-size:1.5em;">👨‍💻</c>
+            <a style="color:#000;" target="_blank" href="https://www.facebook.com/tiago.zangerolami"> Tiago José
+                Zangerolami
+                <i class="fa fa-1x fab fa-facebook-square"></i></a>
+            </a><br>Trabalho de Conclusão do Curso<br><a target="_blank" style="color:#000;" title="Acesse site da pós"
+                href="https://online.pucrs.br/pos-graduacao/desenvolvimento-full-stack">Pós Graduação em Desenvolvimento
+                Full Stack&nbsp;<i class="fa fa-external-link" aria-hidden="true" style="color: #005eff;"></i></a><br>
+            <a style="color:#000;float:inline-end;center-display;inline-block;" title="Site PUCRS" target="_blank"
+                href="https://www.pucrs.br/">Pontifícia Universidade Católica do Rio Grande do Sul&nbsp;<i
+                    class="fa fa-external-link" aria-hidden="true" style="color: #005eff;"></i></a></br>
+            <a target="_blank" title="Mapa de Porto Alegre RS" style="color:#000;"
+                href="https://maps.app.goo.gl/qRmnhfDwLGm1RpSL9">Porto Alegre RS 2023&nbsp;<i
+                    class="fa fa-external-link" aria-hidden="true" style="color: #005eff;"></i></a>
+        </p>
+
+
+        <p style="float:left;display: inline-block;"><i title="HTML5" class="fa fa-2x fab fa-html5"></i>&nbsp;&nbsp;<i
+                title="CSS3" class="fa fa-2x fab fa-css3"></i>&nbsp;&nbsp;<img title="JavaScript" style="width:25px;"
+                src="images/js.png" />&nbsp;&nbsp;
+            <a target="_blank" href="https://jquery.com/"><img title="JQuery" style="width:25px;"
+                    src="images/jquery.png" /></a>&nbsp;&nbsp;<a title="CSS3" target="_blank"
+                href="https://getbootstrap.com/docs/4.3/examples/jumbotron/"><img title="Modelo Bootstrap"
+                    style="width:25px;" src="images/bootstrap.png" /></a>
+            <a style="color:#000;" title="Modelo Quiz" target="_blank"
+                href="https://github.com/QuickenLoans/SlickQuiz"><i
+                    class="fa fa-2x fab fa-github"></i></a>&nbsp;&nbsp;<a
+                href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:78px;height:21px"
+                    src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS válido!" /></a>
+            <a target="_blank" href="https://infinityfree.net/"><img title="Hospedado em infinityfree"
+                    style="width:7rem;" src="images/infinityfree.png" /></a><br><a target="_blank" title="fontawesome"
+                href="https://fontawesome.com/"><i class="fa fa-2x fab fa-font-awesome"></i></a> <a target="_blank"
+                href="https://giphy.com/"><img title="Giphy" style=";width:6rem;" src="images/giphy.png" /></a> <a
+                title="Leitor de Texto" target="_blank" href="https://responsivevoice.com/"><img style="width:7em;"
+                    src="images/responsivevoice.png" /></a>&nbsp;&nbsp;
+            <a target="_blank"
+                href="https://br.freepik.com/fotos-gratis/banner-medico-com-medico-usando-oculos_30555909.htm#query=sa%C3%BAde&position=10&from_view=search&track=sph"><img
+                    style="width:6rem;" src="images/freepik.png"></a><br>
+            <n style="font-size:10px;">Utilize navegadores:</n5>&nbsp;&nbsp;<img src="images/brownser_chome2.jpg"
+                    border="0" title="Chrome 2x.x ou superior">&nbsp;&nbsp;<img src="images/brownser_fire2.jpg"
+                    border="0" title="Firefox 2x.x ou superior">&nbsp;&nbsp;<img src="images/opera.png" border="0"
+                    title="Opera"><br><a title="Tiago José Zangerolami" target="_blank" style="color:#000;"
+                    href="https://br.linkedin.com/in/tiago-front-end-web">
+                    <y style="font-size:10px;vertical-align:middle;">Website&nbsp;<img src="images/responsive.png"
+                            border="0" title="Resposive Desing" />&nbsp;By</y>&nbsp;<img
+                        style="width:2rem;border-radius:0.8em;" src="images/Tiago José Zangerolami.jpg" /><img
+                        style="width:2rem;border-radius:0.8em;" src="images/www.tiago.png" />
+                </a>
+        </p>
+
+    </footer>
+    <!-- \\\\\\\\\\\\\ End Footer ////////////// -->
+
+
+    <!-- rolar para cima -->
+    <script type="text/javascript">
+        $(function () {
+            $(document).on('scroll', function () {
+                if ($(window).scrollTop() > 100) {
+                    $('.smoothscroll-top').addClass('show');
+                } else {
+                    $('.smoothscroll-top').removeClass('show');
+                }
+            });
+            $('.smoothscroll-top').on('click', scrollToTop);
+        });
+
+        function scrollToTop() {
+            verticalOffset = typeof (verticalOffset) != 'undefined' ? verticalOffset : 0;
+            element = $('body');
+            offset = element.offset();
+            offsetTop = offset.top;
+            $('html, body').animate({ scrollTop: offsetTop }, 600, 'linear').animate({ scrollTop: 25 }, 200).animate({ scrollTop: 0 }, 150).animate({ scrollTop: 0 }, 50);
+        }
+    </script>
+    <div class="smoothscroll-top">
+        <span class="scroll-top-inner">
+            <i class="fa fa-2x fa-arrow-circle-up"></i>
+        </span>
+    </div>
+    <!-- fim rolar para cima -->
+
+    <!-- Bootstrap core JavaScript
+            ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script>
+        window.jQuery  document.write('<script src="js/jquery-slim.min.js"><\/script>')
+    </script>
+
+    <script src=".js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- QUIZ -->
+    <script src="quiz/js/jquery.js"></script>
+    <script src="quiz/js/slickQuiz-config.js"></script>
+    <script src="quiz/js/slickQuiz.js"></script>
+    <script src="quiz/js/master.js"></script>
+
+</body>
+
+</html>
